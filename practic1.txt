@@ -1,0 +1,68 @@
+Задание №1
+#include<iostream>
+#include<cmath>
+using namespace std;
+double calculator(double a, double b, char operation)
+{
+	switch (operation)
+	{
+	case('+'):
+		return a + b;
+	case('-'):
+		return a - b;
+	case('*'):
+		return a * b;
+	case('/'):
+		return a / b;
+	default:
+		cout << "Unknown operation";
+		return -1;
+	}
+	return 0;
+}
+int main()
+{
+	double a, b;
+	char operation;
+	cin >> a >> operation>> b;
+	cout << calculator(a, b, operation);
+	return 0;
+}
+Задание №3
+
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	int k = 1;
+	cout << "Введите количество\n";
+	cin >> k;
+        string apple = "яблок";
+		if (k == 1 || k % 10)
+			apple += "о";
+		if ((k > 1 && k < 5) || (k % 10 > 1 && k % 10 < 5))
+			apple += "а";
+		if ((k >= 5 && k < 10) || (k % 10 >= 5 && k % 10 < 10) || (k % 100 > 10 && k % 100 < 15))
+			apple = "яблок";
+		cout << k << apple << '\n';
+return 0;
+}
+Задание №2
+
+#include<iostream>
+#include<windows.h>
+using namespace std;
+int main()
+{
+	int n=1;
+	cin >> n;
+	do
+	{
+		cout << n << '\n';
+		n--;
+	} while (n != 0);
+	Sleep(1000);
+}
